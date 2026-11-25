@@ -141,3 +141,24 @@ nav a[aria-current="page"]{color:var(--ink)}
 .key i{width:12px;height:12px;border-radius:50%;border:2px solid #F8F1E0;box-sizing:border-box;background:#F8F1E0}
 .key.soon i{background:#1E1E1E}
 @media (max-width:700px){.ml i{display:none}}
+
+/* mobile nav: logo left, Menu button right, links open as a full-width list. No script, a hidden checkbox holds the state. */
+.nav-t{position:absolute;width:1px;height:1px;opacity:0;margin:0;pointer-events:none}
+@media (max-width:820px){
+  header{border-bottom:1px solid var(--line)}
+  header .wrap{flex-wrap:wrap;align-items:center;gap:0 16px;padding-block:14px}
+  .brand svg{height:64px}
+  .menu{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border:1px solid var(--ink);color:var(--ink);font-size:0.74rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+  .menu .c{display:none}
+  .nav-t:checked + .menu{background:var(--btn);color:var(--btn-ink)}
+  .nav-t:checked + .menu .o{display:none}
+  .nav-t:checked + .menu .c{display:inline}
+  .nav-t:focus-visible + .menu{outline:2px solid var(--ink);outline-offset:3px}
+  nav{display:none;width:100%;flex-direction:column;flex-wrap:nowrap;gap:0;padding-top:0;margin-top:14px;border-top:1px solid var(--ink);font-size:1rem}
+  .nav-t:checked ~ nav{display:flex}
+  nav a{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:6px 0;border-bottom:1px solid var(--line);font-family:var(--display);font-size:1.35rem;line-height:1.2;color:var(--ink)}
+  nav a:last-child{border-bottom:0}
+  nav a[aria-current="page"]::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--sage)}
+  .hero .wrap{padding-top:28px}
+  .btns .btn{flex:1 1 auto;text-align:center}
+}
