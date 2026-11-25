@@ -162,3 +162,17 @@ nav a[aria-current="page"]{color:var(--ink)}
   .hero .wrap{padding-top:28px}
   .btns .btn{flex:1 1 auto;text-align:center}
 }
+
+/* map on phones: zoom to the part of the world we work in, enlarge the pins and names, centre the Middle East name under its pin */
+.wm-in{position:relative}
+.pin{display:none}
+@media (max-width:700px){
+  .worldmap{overflow:hidden}
+  .wm-in{width:137.5%;margin-left:-4.96%}
+  .ml{font-size:0.95rem}
+  .ml.b{left:68%!important;transform:translateX(-78%);align-items:flex-end;text-align:right}
+  .pin{display:block;position:absolute;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;border-radius:50%;box-sizing:border-box;border:2px solid #F8F1E0;background:#F8F1E0}
+  .pin.soon{background:#1E1E1E}
+  .pin.live{box-shadow:0 0 0 5px rgba(248,241,224,0.2)}
+  .legend{flex-wrap:wrap;gap:10px 24px;margin-top:20px}
+}
