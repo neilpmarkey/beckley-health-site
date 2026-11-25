@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Beckley Health</title>
-<meta name="description" content="Beckley Health builds science-backed wellbeing programs. We are the company behind Beckley Retreats.">
+<meta name="description" content="Beckley Health provides nature-based health and educational programs.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="Beckley Health">
-<meta property="og:description" content="Beckley Health builds science-backed wellbeing programs. We are the company behind Beckley Retreats.">
+<meta property="og:description" content="Beckley Health provides nature-based health and educational programs.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/share.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -64,19 +64,17 @@ section{padding-block:clamp(44px,8vw,96px)}
 .three>div{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--ink);padding-top:18px;min-width:0}
 .three p{font-size:0.98rem}
 
-.cos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px}
-.co{background:var(--bg);border:1px solid var(--line);padding:clamp(22px,3.5vw,36px);display:flex;flex-direction:column;gap:14px;min-width:0}
+.parent{position:relative;width:fit-content;margin:0 auto 28px;padding:18px 34px;background:var(--btn);color:var(--btn-ink);font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.2rem);line-height:1.05}
+.parent::after{content:"";position:absolute;top:100%;left:50%;height:28px;border-left:1px solid var(--ink)}
+.kids{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-top:28px}
+.kids::before{content:"";position:absolute;top:0;left:calc((100% - 60px) / 8);right:calc((100% - 60px) / 8);border-top:1px solid var(--ink)}
+.co{position:relative;background:var(--bg);border:1px solid var(--line);padding:clamp(18px,2.4vw,26px);display:flex;flex-direction:column;gap:14px;min-width:0}
+.co::before{content:"";position:absolute;top:-29px;left:50%;height:28px;border-left:1px solid var(--ink)}
 .tag{align-self:flex-start;font-size:0.66rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:4px 9px;border:1px solid var(--ink);color:var(--ink)}
 .tag.live{background:var(--btn);color:var(--btn-ink)}
-.co .name{font-family:var(--display);font-size:clamp(1.7rem,3.4vw,2.3rem);line-height:1.05;color:var(--ink)}
-.co p{font-size:0.98rem}
-.co .places{font-size:0.86rem;color:var(--ink);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
-.co a.more{font-weight:500;font-size:0.84rem;letter-spacing:0.08em;text-transform:uppercase}
-
-.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,4vw,44px)}
-.facts .n{font-family:var(--display);font-size:clamp(2.4rem,6vw,4rem);line-height:1;color:var(--ink);font-variant-numeric:tabular-nums}
-.facts p{font-size:0.95rem;margin-top:8px}
-.note{font-size:0.82rem;margin-top:26px;max-width:70ch}
+.co .name{font-family:var(--display);font-size:clamp(1.35rem,2.2vw,1.7rem);line-height:1.1;color:var(--ink)}
+.co .places{font-size:0.86rem;color:var(--body);border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.co a.more{font-size:0.86rem;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
 
 .band{background:var(--sage);color:var(--sage-ink)}
 .band .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(20px,5vw,56px);align-items:end}
@@ -89,8 +87,12 @@ footer .wrap{padding-block:28px 40px;display:flex;flex-wrap:wrap;gap:8px 28px;ju
   nav{display:none}
   .hero .wrap{grid-template-columns:minmax(0,1fr)}
   .hero figure{aspect-ratio:4 / 3}
-  .three,.cos,.facts,.band .wrap{grid-template-columns:minmax(0,1fr)}
-  .facts{gap:26px}
+  .three,.band .wrap{grid-template-columns:minmax(0,1fr)}
+  .parent{margin:0 0 28px}
+  .parent::after{left:20px}
+  .kids{grid-template-columns:minmax(0,1fr);gap:16px;padding-top:0;padding-left:24px;margin-left:20px;border-left:1px solid var(--ink)}
+  .kids::before{display:none}
+  .co::before{top:50%;left:-25px;width:24px;height:0;border-left:0;border-top:1px solid var(--ink)}
 }
 
 html{scroll-behavior:smooth}
@@ -113,7 +115,7 @@ img{max-width:100%}
       <div class="hero-text">
         <div class="eyebrow">Beckley Health</div>
         <h1>A healthier, more beautiful world is possible.</h1>
-        <p class="lede">Beckley Health builds science-backed wellbeing programs for people who are not broken, but called. We are the company behind Beckley Retreats.</p>
+        <p class="lede">Beckley Health provides nature-based health and educational programs.</p>
         <div class="btns"><a class="btn solid" href="#companies">Our companies</a><a class="btn ghost" href="#contact">Get in touch</a></div>
       </div>
       <figure><img src="assets/hero.jpg" srcset="assets/hero-700.jpg 700w, assets/hero.jpg 1200w" sizes="(max-width: 820px) 100vw, 520px" width="1200" height="1799" fetchpriority="high" alt="The drive to the coach house at Good Hope, Jamaica, framed by pink flowers"></figure>
@@ -133,34 +135,32 @@ img{max-width:100%}
 
   <section id="companies">
     <div class="wrap">
-      <div class="sec-head"><div class="eyebrow">Our companies</div><h2>One company, with a clear name for each part of the work.</h2></div>
-      <div class="cos">
-        <div class="co">
-          <span class="tag live">Operating today</span>
-          <div class="name">Beckley Retreats</div>
-          <p>Retreat programs for accomplished adults at a turning point. Four weeks of preparation, a retreat on site, and six weeks of integration.</p>
-          <a class="more" href="https://www.beckleyretreats.com">Visit beckleyretreats.com</a>
-          <div class="places">Jamaica and the Netherlands</div>
-        </div>
-        <div class="co">
-          <span class="tag">In development</span>
-          <div class="name">New programs</div>
-          <p>We are working with partners on new programs and new locations. We will share more here when there is something to announce.</p>
-          <div class="places">Details to follow</div>
+      <div class="sec-head"><div class="eyebrow">Our companies</div></div>
+      <div class="tree">
+        <div class="parent">Beckley Health</div>
+        <div class="kids">
+          <div class="co">
+            <span class="tag live">Operating today</span>
+            <div class="name">Beckley Retreats<br>Jamaica</div>
+            <a class="more" href="https://www.beckleyretreats.com">beckleyretreats.com</a>
+          </div>
+          <div class="co">
+            <span class="tag live">Operating today</span>
+            <div class="name">Beckley Retreats<br>Netherlands</div>
+            <a class="more" href="https://www.beckleyretreats.com">beckleyretreats.com</a>
+          </div>
+          <div class="co">
+            <span class="tag">Coming soon</span>
+            <div class="name">Beckley Retreats<br>US</div>
+            <div class="places">Details to follow</div>
+          </div>
+          <div class="co">
+            <span class="tag">Coming soon</span>
+            <div class="name">Beckley Retreats<br>Middle East</div>
+            <div class="places">Details to follow</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="alt">
-    <div class="wrap">
-      <div class="sec-head"><div class="eyebrow">So far</div><h2>Built carefully, one program at a time.</h2></div>
-      <div class="facts">
-        <div><div class="n">1,200+</div><p>guests have taken part in our programs.</p></div>
-        <div><div class="n">2</div><p>countries where we run retreats today.</p></div>
-        <div><div class="n">P.B.C.</div><p>a public benefit corporation, by charter.</p></div>
-      </div>
-      <p class="note">Guest count is company reported.</p>
     </div>
   </section>
 
