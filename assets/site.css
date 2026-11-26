@@ -1,11 +1,10 @@
 /* Layout: a quiet one-page company site. White ground, one large photograph, sage used once for the contact band. */
 :root{
+  color-scheme:light;
   --bg:#FFFFFF; --alt:#F8F1E0; --ink:#1E1E1E; --body:#696969; --line:#DDD8C9; --sage:#A5A996; --sage-ink:#1E1E1E; --btn:#1E1E1E; --btn-ink:#FFFFFF;
   --display:Spectral,Georgia,"Times New Roman",serif;
   --sans:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg:#1A1A19; --alt:#222220; --ink:#F8F1E0; --body:#B4B2A6; --line:#3B3B38; --btn:#F8F1E0; --btn-ink:#1E1E1E; color-scheme:dark } }
-:root[data-theme="dark"]{ --bg:#1A1A19; --alt:#222220; --ink:#F8F1E0; --body:#B4B2A6; --line:#3B3B38; --btn:#F8F1E0; --btn-ink:#1E1E1E; color-scheme:dark }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--body);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 h1,h2,h3,p,figure{margin:0}
