@@ -198,3 +198,4 @@ nav a[aria-current="page"]{color:var(--ink)}
 .photo figcaption{font-size:0.82rem;margin-top:10px}
 @media (min-width:1081px){.three.four.five{grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(18px,2.4vw,28px)}}
 @media (min-width:821px) and (max-width:1080px){.three.four.five{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:821px){.eco.four .co.us:last-child:nth-child(odd){grid-column:1 / -1}}
