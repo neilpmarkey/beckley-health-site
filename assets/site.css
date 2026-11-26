@@ -192,3 +192,9 @@ nav a[aria-current="page"]{color:var(--ink)}
 /* board, below the team */
 .board-head{margin-top:clamp(48px,8vw,88px);margin-bottom:clamp(20px,3vw,32px)}
 .three.board .role{font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink)}
+
+.photo{padding-bottom:0}
+.photo img{width:100%;height:auto;display:block}
+.photo figcaption{font-size:0.82rem;margin-top:10px}
+@media (min-width:1081px){.three.four.five{grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(18px,2.4vw,28px)}}
+@media (min-width:821px) and (max-width:1080px){.three.four.five{grid-template-columns:repeat(3,minmax(0,1fr))}}
