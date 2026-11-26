@@ -179,3 +179,6 @@ nav a[aria-current="page"]{color:var(--ink)}
 .eco.four .co{padding:clamp(22px,3vw,34px)}
 .eco.four .co p{font-size:1rem}
 @media (max-width:820px){.eco.four{grid-template-columns:minmax(0,1fr)}}
+.press{display:flex;flex-wrap:wrap;gap:clamp(10px,2vw,18px) clamp(28px,5vw,64px);align-items:baseline}
+.press a{font-family:var(--display);font-weight:300;font-size:clamp(1.45rem,3.2vw,2.3rem);line-height:1.15;color:var(--ink);text-decoration:none;white-space:nowrap}
+.press a:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
